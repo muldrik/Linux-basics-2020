@@ -29,3 +29,20 @@ tail /etc/passwd -c 5 > tail.txt
 11) ls -l /etc > ls-etc.txt
 12) ls -l /etc | wc -l
 228
+Вторая группа заданий
+Задание 1
+1) mkdir DirA DirB
+cd dirA
+echo 123 > f1.txt
+echo 456 > f2.txt
+cd ../dirB
+echo 789 > f3.txt
+echo 000 > f4.txt
+cd ..
+cat DirA/t1.txt DirA/t2.txt DirB/t3.txt DirB/t4.txt > t5.txt
+2)rm DirA DirB -r
+Задание 2
+1) grep 1000 /etc/passwd
+muldrik:x:1000:1000:muldrik,,,:/home/muldrik:/bin/bash
+
+
