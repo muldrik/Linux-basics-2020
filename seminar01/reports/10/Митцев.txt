@@ -1,20 +1,21 @@
 1) id
-uid=1000(muldrik) gid=1000(muldrik) groups=1000(muldrik),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare)
+	uid=1000(muldrik) gid=1000(muldrik) groups=1000(muldrik),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare)
 2) date
-Чт 10 сен 2020 14:20:17 MSK
+	Чт 10 сен 2020 14:20:17 MSK
 3) pwd
-/home/muldrik/Code/Linux-basics-2020/seminar01
+	/home/muldrik/Code/Linux-basics-2020/seminar01
 4) ls
-reports
-task01.md
+	reports
+	task01.md
 ls -l
-total 12
-drwxrwxr-x 3 muldrik muldrik 4096 сен 10 14:11 reports
--rw-rw-r-- 1 muldrik muldrik 6996 сен 10 14:07 task01.md
+	total 12
+	drwxrwxr-x 3 muldrik muldrik 4096 сен 10 14:11 reports
+	-rw-rw-r-- 1 muldrik muldrik 6996 сен 10 14:07 task01.md
 5) mkdir work
 cd work
 6) echo 0123456789 > digits.txt
 cat digits.txt
+	0123456789
 7) cat digits.txt | cat >> digits.txt 
 8) cat digits.txt | cat >> digits.txt 
 cat digits.txt | cat >> digits.txt 
@@ -22,13 +23,13 @@ cat digits.txt | cat >> digits.txt
 cat digits.txt | cat >> digits.txt 
 cat digits.txt | cat >> digits.txt 
 echo 0123456789 >> digits.txt
-9) wc digits.txt
- 65  65 715 digits.txt
+9) wc digits.txt -l
+ 	65 digits.txt
 10) head /etc/passwd -c 5 > head.txt
 tail /etc/passwd -c 5 > tail.txt
 11) ls -l /etc > ls-etc.txt
 12) ls -l /etc | wc -l
-228
+	228
 Вторая группа заданий
 Задание 1
 1) mkdir DirA DirB
@@ -43,6 +44,104 @@ cat DirA/t1.txt DirA/t2.txt DirB/t3.txt DirB/t4.txt > t5.txt
 2)rm DirA DirB -r
 Задание 2
 1) grep 1000 /etc/passwd
-muldrik:x:1000:1000:muldrik,,,:/home/muldrik:/bin/bash
-
+	muldrik:x:1000:1000:muldrik,,,:/home/muldrik:/bin/bash
+2) date --date="Jan 1 2021" +%A
+	Пятница
+Задание 3
+1) { ls ;id ;ps ;date ;} > new-file.txt
+grep new-file.txt new-file.txt 
+	new-file.txt
+2) cal -y 2019 > cal-2019
+Задание 4
+1) ls /etc | grep .conf | head
+	adduser.conf
+	apg.conf
+	appstream.conf
+	brltty.conf
+	ca-certificates.conf
+	ca-certificates.conf.dpkg-old
+	dconf
+	debconf.conf
+	deluser.conf
+	e2scrub.conf
+2) mkdir rights
+chmod u-x rights/
+cd rights/
+	bash: cd: rights/: Permission denied
+Задание 5
+1) touch a.txt
+chmod 640 a.txt
+2) chmod g-r a.txt 
+Задание 6
+1)tar -cf archive.tar t5.txt cal-2019 digits.txt
+gzip archive.tar 
+tar -xf archive.tar.gz
+Задание 7
+1) touch a.txt
+chmod 640 a.txt
+2) chmod a+w a.txt 
+Задание 8
+1) ls /usr/bin | grep ^z
+	zcat
+	zcmp
+	zdiff
+	zdump
+	zegrep
+	zenity
+	zfgrep
+	zforce
+	zgrep
+	zip
+	zipcloak
+	zipdetails
+	zipgrep
+	zipinfo
+	zipnote
+	zipsplit
+	zjsdecode
+	zless
+	zmore
+	znew
+2) find / -mtime -1 (Очень длинный вывод)
+Задание 9
+1) sudo find / -user muldrik | wc -l
+	170985
+2) cat /etc/passwd | tail -n 5
+	pulse:x:123:128:PulseAudio daemon,,,:/var/run/pulse:/usr/sbin/nologin
+	gnome-initial-setup:x:124:65534::/run/gnome-initial-setup/:/bin/false
+	gdm:x:125:130:Gnome Display Manager:/var/lib/gdm3:/bin/false
+	muldrik:x:1000:1000:muldrik,,,:/home/muldrik:/bin/bash
+	systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+cat /etc/passwd | tail -n 5 | wc -w
+	10
+Задание 10
+1) touch b.txt
+mkdir dB
+ls -l b.txt
+	-rw-rw-r-- 1 muldrik muldrik 0 сен 11 17:37 b.txt
+ls -la dB
+	total 8
+	drwxrwxr-x 2 muldrik muldrik 4096 сен 11 17:37 .
+	drwxrwxr-x 4 muldrik muldrik 4096 сен 11 17:37 ..
+2) ls /etc | grep .conf | head
+	adduser.conf
+	apg.conf
+	appstream.conf
+	brltty.conf
+	ca-certificates.conf
+	ca-certificates.conf.dpkg-old
+	dconf
+	debconf.conf
+	deluser.conf
+	e2scrub.conf
+Задание 11
+1) touch a.txt
+chmod a+w a.txt 
+2) mv a.txt aaa.txt
+cat t5.txt >> aaa.txt 
+cat aaa.txt
+	123
+	456
+	789
+	000
 

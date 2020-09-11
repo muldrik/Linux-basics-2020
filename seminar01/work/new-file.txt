@@ -1,0 +1,11 @@
+digits.txt
+head.txt
+ls-etc.txt
+new-file.txt
+t5.txt
+tail.txt
+uid=1000(muldrik) gid=1000(muldrik) groups=1000(muldrik),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare)
+    PID TTY          TIME CMD
+  22117 pts/1    00:00:00 bash
+  30955 pts/1    00:00:00 ps
+Пт 11 сен 2020 16:07:07 MSK
