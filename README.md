@@ -3,18 +3,15 @@
 
 Формат сдачи заданий: 
 1) Делаете fork данного репозитория.
-2) Создаете в своем репозитории ветку hw{номер дз}
-3) В каталог, соответствующий текущей практике, добавляете решение задания
-4) Выполняете в ней дз и создаете pull request
-5) Называть pull request в формате 'HW{номер дз}, Имя Фамилия'
-6) Добавляете меня в reviewer
+2) В каталог, соответствующий текущей практике, добавляете решение задания, заливаете результат в ваш fork-нутый репозиторий
+3) Для того, чтобы сдать задание создаете pull request с названием "[номер_вашей_группы] ФИО" в danyaberezun:Linux-basics-2020:master (NB: перед открытием pull request проверьте, что преподаватель не внес изменений; если надо --- сначала получите их (см. инструкцию ниже))
 
 
 Чтобы получить задания на новую практику алгоритм такой:
 
-``` git remote add original_repo https://github.com/sloboegen98/Linux-basics-2020 ```
+``` git remote add original_repo https://github.com/danyaberezun/Linux-basics-2020 ```
 
-``` original_repo``` - это имя для remote-репозитория (имя может быть любым), а ```https://github.com/sloboegen98/Linux-basics-2020``` - ссылка на него
+``` original_repo``` - это имя для remote-репозитория (имя может быть любым), а ```https://github.com/danyaberezun/Linux-basics-2020``` - ссылка на него
 
 Теперь, чтобы получить свежие задания, вам необходимо сделать следующее:
 
@@ -30,3 +27,4 @@ $ git checkout master
 $ git pull original_repo master
 $ git push origin master
 ```
+# [Таблица с результатами](https://docs.google.com/spreadsheets/d/1xwO9Dj-AaPK2vbhRpaFZm33hqgvWxgfloKZ23v9yLsk/edit?usp=sharing)
