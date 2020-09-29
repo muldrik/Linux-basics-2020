@@ -1,5 +1,3 @@
 #! /bin/bash
-while read line; do
-    echo "$line $(echo $line | wc -w)"
-done < $1
-echo "$line $(echo $line | wc -w)"
+cat <file.txt | while read -r s  || [ -n "$s" ]
+do cnt=$(echo "$s" | wc -w); echo "$s $cnt"; done
