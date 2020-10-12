@@ -1,3 +1,2 @@
 #! /bin/bash
-
-SUM=0; for i in `cat numbers.txt`; do SUM=$(($SUM + $i)); done; echo $SUM
+for i in `cat numbers.txt`; do echo $(seq -s "*" 1 $i | bc);  done;
