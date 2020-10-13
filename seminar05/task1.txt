@@ -1,13 +1,41 @@
 # print your command here
 
-a. git init ...
+a. 
+git init homework
 
 b.
+cd homework/
+echo "My name is Nikita" > bio.md
+printf "#include<iostream>\nint main() {\n    std::cout<<\"Hello\";\n}" > main.cpp
+git add bio.md main.cpp
+git commit -m "Task b done"
 
 c.
+printf "build_run: main.cpp\n\tg++ main.cpp -o main\n\t./main" > Makefile
+make
+git add bio.md Makefile main.cpp
+git commit -m "Task c done"
 
 d.
+echo "lol" >> bio.md
+git add bio.md
+git commit -m "lol"
+
+echo "kek" >> bio.md
+git add bio.md
+git commit -m "kek"
+
+echo "cheburek" >> bio.md
+git add bio.md
+git commit -m "cheburek"
 
 e.
+git checkout -b cmake $(git rev-list --max-parents=0 HEAD)
+printf "cmake_minimum_required(VERSION 3.10)\nproject(Hw)\nadd_executable(Hw main.cpp)" > CMakeLists.txt
 
 f.
+git checkout master
+git merge cmake
+
+
+
