@@ -1,1 +1,3 @@
-# print your commands
+sudo docker build -t hw/linux .
+sudo docker run --name pyserver --rm -p 65432:65432 hw/linux python3 server.py
+sudo docker container stop pyserver //Takes about 6 seconds to stop

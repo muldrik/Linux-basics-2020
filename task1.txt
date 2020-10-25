@@ -1,1 +1,3 @@
-# print your commands
+sudo docker run -it haskell
+2+3
+print "hello world"
