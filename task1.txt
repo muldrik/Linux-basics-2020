@@ -1,4 +1,4 @@
-sudo docker run -it haskell
+$ sudo docker run -it haskell
 GHCi, version 8.10.2: https://www.haskell.org/ghc/  :? for help
 Prelude> 2+3
 5
