@@ -1,3 +1,8 @@
 sudo docker run -it haskell
-2+3
-print "hello world"
+GHCi, version 8.10.2: https://www.haskell.org/ghc/  :? for help
+Prelude> 2+3
+5
+Prelude> print "hello world"
+"hello world"
+Prelude> ^D
+Leaving GHCi.
